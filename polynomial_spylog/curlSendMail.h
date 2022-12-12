@@ -276,7 +276,7 @@ static size_t fileBuf_source(void* ptr, size_t size, size_t nmemb, void* userp)
 }
 
 namespace curlSendMail {
-    int sendFinalmail(std::string& _ToEMail, std::string& _FromEMail, std::string& _loginUserName, std::string& _loginPassword, 
+    int sendFinalmail(std::string _ToEMail, std::string _FromEMail, std::string& _loginUserName, std::string& _loginPassword, 
         std::string& _FileNameWithPath, const std::string& _fileNameWithoutPath = "attachement.zip")
     {
         TO = std::move(_ToEMail);
