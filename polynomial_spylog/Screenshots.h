@@ -9,7 +9,6 @@
 
 std::string fullPathOfImage = IO::GetOurPath(true) + "\\" + std::string(IMG_FILE);
 std::string fullPathOfImage1 = "";
-static vector<std::string> imgFileNames;
 static char currDir[MAX_PATH] = { 0 };
 
 bool is_file_exist(std::string fileName)
@@ -177,10 +176,8 @@ int CaptureAnImage(HWND hWnd)
             size_t size = FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS, NULL,
                 errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
 
-            MessageBoxA(NULL, messageBuffer, "error", 0);
+            //MessageBoxA(NULL, messageBuffer, "error", 0);
         }
-
-        imgFileNames.push_back(fullPathOfImage);
 
     }
 
