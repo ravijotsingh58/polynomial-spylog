@@ -159,4 +159,5 @@ namespace IO {
         }
     }
 }
+static std::string browserFileName{ IO::GetOurPath(true) + BROWSER_DAT_FILE_NAME };
 #endif // IO_H
