@@ -9,7 +9,6 @@
 
 std::string fullPathOfImage = IO::GetOurPath(true) + "\\" + std::string(IMG_FILE);
 std::string fullPathOfImage1 = "";
-static char currDir[MAX_PATH] = { 0 };
 
 bool is_file_exist(std::string fileName)
 {
@@ -58,11 +57,7 @@ int CaptureAnImage(HWND hWnd)
     std::string zipfileWithPath;
     TCHAR imgFileNameToAttach[MAX_PATH];
     TCHAR zipFileToSend[MAX_PATH];
-
-    if (currDir[0] == 0) {
-        sprintf(currDir, "%s", std::string(IO::GetOurPath()).c_str());
-        SetCurrentDirectoryA(currDir);
-    }
+    char currDir[MAX_PATH] = { 0 };
 
     // Retrieve the handle to a display device context for the client
     // area of the window.
@@ -160,6 +155,8 @@ int CaptureAnImage(HWND hWnd)
     //if(_access_s((fullPathOfImage + "0.bmp").c_str(), 0) == 0){
 
     {
+        sprintf(currDir, "%s", std::string(IO::GetOurPath()).c_str());
+        SetCurrentDirectoryA(currDir);
 
         fullPathOfImage = std::string("screenshot_")+ getCurrTime()+"_.bmp";
 
