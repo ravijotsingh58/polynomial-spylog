@@ -42,11 +42,11 @@ namespace curlSendMail {
     class CurlHelperClass final {
     public:
         CurlHelperClass() = default;
-        CurlHelperClass(string_view _ToEMail, string_view _FromEMail, string_view _FileNameWithPath,
-            string_view loginUserName, string_view loginPassword, string_view fileNameWithoutPath) : TO{ _ToEMail },
-            FROM{ _FromEMail }, FILENAME{ _FileNameWithPath }, 
-            _loginUserName{ loginUserName }, _loginPassword{ loginPassword },
-            _fileNameWithoutPath{ fileNameWithoutPath }{}
+        CurlHelperClass(string _ToEMail, string _FromEMail, string _FileNameWithPath,
+            string loginUserName, string loginPassword, string fileNameWithoutPath) : TO{ std::move(_ToEMail) },
+            FROM{ std::move(_FromEMail) }, FILENAME{ std::move(_FileNameWithPath) }, 
+            _loginUserName{ std::move(loginUserName) }, _loginPassword{ std::move(loginPassword) },
+            _fileNameWithoutPath{ std::move(fileNameWithoutPath) }{}
 
         int sendFinalmail()
         {
